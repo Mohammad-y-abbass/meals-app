@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import classes from "./MealItem.module.css";
-export default function MealItem({ title, slug, image, summary, creator }) {
+export default function MealItem({ title, mealSlug, image, summary, creator }) {
   return (
     <article className={classes.meal}>
       <header>
