@@ -2,6 +2,11 @@ import ImagePicker from "@/components/meals/imagePicker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/action";
 
+export const metadata = {
+  title: "Share Your Meal",
+  description: "Share your favorite meal with the world.",
+};
+
 export default function ShareMealPage() {
   return (
     <>
@@ -40,7 +45,7 @@ export default function ShareMealPage() {
               required
             ></textarea>
           </p>
-          <ImagePicker />
+          <ImagePicker label="Your image" name="image" />
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>

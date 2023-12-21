@@ -4,8 +4,13 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/mealsGrid";
 import { getMeals } from "@/lib/meals";
 
-async function Meals() {
-  const meals = await getMeals();
+export const metadata = {
+  title: "All Meals",
+  description: "Delicious meals, created by you.",
+};
+
+function Meals() {
+  const meals = getMeals();
   return <MealsGrid meals={meals} />;
 }
 
@@ -14,7 +19,7 @@ export default function MealsPage() {
     <>
       <header className={classes.header}>
         <h1>
-          Delicious meals, created{" "}
+          Delicious meals, created
           <span className={classes.highlight}>by you</span>
         </h1>
         <p>
